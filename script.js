@@ -20,16 +20,16 @@
 
 // Додаємо обробник події при сабміті форми
 // form.addEventListener('submit', function(event) {
-// 	event.preventDefault();  // Запобігаємо перезавантаженню сторінки
+	// event.preventDefault();  // Запобігаємо перезавантаженню сторінки
 
-// 	// Отримуємо вік з поля введення
-// 	const age = Number(document.getElementById('age').value);
+// Отримуємо вік з поля введення
+	// const age = Number(document.getElementById('age').value);
 
-// 	// Перевірка на коректність введених даних
-// 	if (isNaN(age) || age < 0) {
-// 		result.textContent = 'Будь ласка, введіть коректний вік.';
-// 		return;
-// 	}
+// Перевірка на коректність введених даних
+	// if (isNaN(age) || age < 0) {
+	// 	result.textContent = 'Будь ласка, введіть коректний вік.';
+	// 	return;
+	// }
 
 // Визначаємо категорію на основі віку
 // 	if (age <= 11) {
@@ -69,4 +69,25 @@ if (age <= 11) {
 }
 
 }
-  
+
+
+const num = prompt('Введiть число вiд 0 до 9');
+
+const symbols = {
+	0: ')',
+  1: '!',
+  2: '@',
+  3: '#',
+  4: '$',
+  5: '%',
+  6: '^',
+  7: '&',
+  8: '*',
+  9: '('
+};
+
+if (symbols[num]) {
+	alert(`Число ${num} - символ ${symbols[num]}`);
+}else {
+	alert('Будь-ласка введiть правильне число')
+}
