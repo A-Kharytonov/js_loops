@@ -71,6 +71,7 @@ if (age <= 11) {
 }
 
 
+// 2 завдання
 const num = prompt('Введiть число вiд 0 до 9');
 
 const symbols = {
@@ -91,3 +92,53 @@ if (symbols[num]) {
 }else {
 	alert('Будь-ласка введiть правильне число')
 }
+
+
+// 3 завдання
+const a = Number(prompt('Введи перше число'));
+const b = Number(prompt('Введи друге число'));
+
+let start = Math.min(a, b);
+let end = Math.max(a, b);
+
+let sum = 0;
+
+for (let i = start; i <= end; i++) {
+  sum += i;
+}
+
+alert(`Сума чисел від ${start} до ${end} дорівнює ${sum}`);
+
+
+// 4 завдання
+const num1 = Number(prompt("Введіть перше число:"));
+const num2 = Number(prompt("Введіть друге число:"));
+
+
+function findGCD(a, b) {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a; 
+}
+
+
+const gcd = findGCD(num1, num2);
+
+alert(`Найбільший спільний дільник чисел ${num1} і ${num2} — це ${gcd}`);
+
+
+// Завдання 5
+const number = Number(prompt("Введіть число:"));  
+
+let divisors = ""; 
+
+for (let index = 1; index <= number; index++) {
+  if (number % index === 0) {
+    divisors += index + " "; 
+  }
+}
+
+alert("Дільники числа " + number + ": " + divisors);  
